@@ -1,0 +1,96 @@
+📖 Voice-Powered Audiobook Downloader
+This is a web application built with Python and Streamlit that allows you to find classic, public domain books and convert them into a single, downloadable MP3 audiobook file. You can search for books using either text or your voice.
+
+✨ Features
+Voice Search: Find books by speaking the title or author's name.
+
+Text Search: A traditional search bar is also available.
+
+Public Domain Library: Searches the vast collection of free books from Project Gutenberg.
+
+Audiobook Creation: Converts the full text of a selected book into a high-quality audio file.
+
+Speed Control: Choose between a "Slower" or "Normal" voice speed for the audiobook.
+
+One-Click Download: Combines the entire audiobook into a single MP3 file that you can download and save.
+
+💻 How to Use the App (For Users)
+Go to the App's Website: Open the public URL for the deployed application.
+
+Search for a Book: Use the search bar or click the "🎤 Use Voice Search" button to find a classic book (e.g., "The Raven" or "Jane Austen").
+
+Select a Book: From the search results, click the "Select Book" button next to the title you want.
+
+Create the Audiobook:
+
+Choose your desired playback speed ("Slower" or "Normal").
+
+Click the "🚀 Create Audiobook for Download" button.
+
+Wait for the progress bar to complete. This may take a few minutes for longer books.
+
+Download: Once the process is finished, a "✅ Download Audiobook (MP3)" button will appear. Click it to save the complete MP3 file to your computer.
+
+🛠️ For Developers: Running Locally
+Follow these steps to run the application on your local machine.
+
+1. Prerequisites
+Python 3.8+
+
+ffmpeg: A required utility for processing audio.
+
+Installation Guide: Follow the steps here to download ffmpeg and add it to your system's PATH.
+
+2. Get the Code
+Download or clone the project files into a folder on your computer. Let's call the folder AUDIOBOOK APP.
+
+3. Create a Virtual Environment
+It's highly recommended to use a virtual environment to keep dependencies isolated.
+
+# For Windows
+python -m venv venv
+.\venv\Scripts\activate
+
+# For macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+
+4. Install Required Libraries
+Install all the necessary Python packages using the requirements.txt file.
+
+pip install -r requirements.txt
+
+5. Download NLTK Data
+The app uses the NLTK library to split the book text into sentences. Run the setup script once to download the necessary data.
+
+python setup.py
+
+6. Run the App
+Open a terminal or Command Prompt.
+
+Navigate to your project folder. For example, if it's on your Desktop:
+
+cd Desktop\"AUDIOBOOK APP"
+
+Activate the virtual environment:
+
+.\venv\Scripts\activate
+
+Start the Streamlit server:
+
+streamlit run app.py
+
+📚 Libraries Used
+Streamlit: For the web application interface.
+
+SpeechRecognition: For the voice search functionality.
+
+gTTS (Google Text-to-Speech): For converting text into audio.
+
+pydub: For combining audio chunks into a single file.
+
+ffmpeg: The core audio processing engine used by pydub.
+
+NLTK: For splitting the book text into sentences.
+
+Requests: For making API calls to find books.
