@@ -1,1 +1,17 @@
 venv/
+.venv/
+env/
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.mp3
+chunk_*.mp3
+temp_audio*.mp3
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
